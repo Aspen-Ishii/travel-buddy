@@ -6,14 +6,18 @@ import Backpack from './components/Backpack/Backpack';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const addItem = (item) => {
+    console.log(item)
+  }
 
   return (
     <div className='container'>
       <header>
         <h1>Travel Buddy</h1>
       </header>
-      <Backpack />
+      <Backpack addItem={addItem}/>
       <Footer />
     </div>
   )
