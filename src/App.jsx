@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import './App.css';
 
 //custom components
-import Backpack from './components/Backpack';
+import Backpack from './components/Backpack/Backpack';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,7 @@ function App() {
         <h1>Travel Buddy</h1>
       </header>
       <Backpack />
-      
+      <Footer />
     </div>
   )
 }

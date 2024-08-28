@@ -27,6 +27,12 @@ h1 {
   text-align: center;
 }
 
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
 /* Vit +react code bellow 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
