@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6em;
+    font-size: var(--_size);
+    border: .2em solid hsl(var(--muted) / 0.8);
+    padding: .6em;
+    border-radius: calc(var(--_radius) * 2);
+  }
+  
+  .item-group {
+    display: flex;
+    align-items: center;
+    --taskgroup-gap: .5em;
+    gap: var(--taskgroup-gap);
+  }
+  
+  .label {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.4;
+  }
+  
+  
