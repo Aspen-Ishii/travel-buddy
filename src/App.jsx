@@ -3,13 +3,14 @@ import './App.css';
 
 //custom components
 import Backpack from './components/Backpack/Backpack';
+import ItemList from './components/Backpack/ItemList';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [items, setItems] = useState([]); {/*set to empty array */}
 
   const addItem = (item) => {
-    console.log(item)
+    setItems(prevState => [... prevState, item])
   }
 
   return (
@@ -18,6 +19,7 @@ function App() {
         <h1>Travel Buddy</h1>
       </header>
       <Backpack addItem={addItem}/>
+      {items && <ItemList items={items}/>}
       <Footer />
     </div>
   )

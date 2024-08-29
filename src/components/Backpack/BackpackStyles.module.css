@@ -36,7 +36,7 @@
     width: 100%;
     background-color: pink;
   }
-  
+
   .input:focus {
     outline: none;
     box-shadow: 0 0 0 0.2em hsl(var(--bg)), 0 0 0 0.4em hsl(var(--accent) / 0.8);
