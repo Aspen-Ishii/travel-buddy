@@ -7,7 +7,7 @@ import styles from './SingleItem.module.css'
 const ItemList =({items}) => {
   return (
     <ul className={styles.items}>
-        {items.map(item => (
+        {items.sort((a,b) => b.id - a.id) .map (item => (
             <SingleItem
                 key={item.id}
                 item={item}
