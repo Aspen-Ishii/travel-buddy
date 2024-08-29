@@ -34,13 +34,24 @@
     border: none;
     padding: 0.35em 0.55em;
     width: 100%;
-
+    background-color: pink;
   }
-
+  
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2em hsl(var(--bg)), 0 0 0 0.4em hsl(var(--accent) / 0.8);
+  }
+  
+  .input:focus~.label,
+  .input:not(:placeholder-shown)~.label {
+    transform: translate3d(0, -3em, 0);
+    background-color: hsl(var(--bg));
+    color: hsl(var(--accent) / 0.8);
+  }
+  
   .input::placeholder {
     opacity: 0;
   }
-
 
   .btn {
     max-width: fit-content;
@@ -49,13 +60,23 @@
     gap: 0.5em;
     text-decoration: none;
     padding: 0.5em;
+    background-color: pink ;
+    border-radius: 10%;
   }
 
   .btn :where(svg, img, span) {
     pointer-events: none;
   }
-
+  
+  .btn :where(svg, img) {
+    width: var(--_size);
+    height: var(--_size);
+  }
+  
+  
   .btn:focus {
     outline: none;
   }
+  
+
   

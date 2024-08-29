@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './BackpackStyles.module.css';
 
 //imported libraries
-import { PlusCircleIcon } from '@heroicons/react/24/solid';
+import { PlusIcon } from '@heroicons/react/24/solid';
 
 //prevent auto page refresh when form is submitted 
 const Backpack = ({addItem}) => {
@@ -33,8 +33,7 @@ const Backpack = ({addItem}) => {
            <label htmlFor='item' className={styles.label}>Enter Item</label> 
         </div>
         <button className={styles.btn} aria-label='Add Item' type='submit'>
-            submit
-        <PlusCircleIcon />
+        <PlusIcon />
         </button>
     </form>
   );
