@@ -25,16 +25,20 @@
     margin-inline: 0.45em;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); 
     padding: 0.1em 0.35em;
     
   }
 
   .input {
     border: none;
+    border-radius: var(--_radius);
     padding: 0.35em 0.55em;
     width: 100%;
-    background-color: pink;
+    background-color: hsl(var(--muted));
+    caret-color: hsl(var(--accent));
+    box-shadow: 0 0 0 -0.1em hsl(var(--bg)), 0 0 0 -0.2em hsl(var(--accent) / 0.8);
+    transition: box-shadow var(--_tspeed_fast) var(--_ttype_squish);
   }
 
   .input:focus {
@@ -58,10 +62,15 @@
     display: flex;
     place-items: center;
     gap: 0.5em;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--bg));
     text-decoration: none;
     padding: 0.5em;
-    background-color: pink ;
     border-radius: 10%;
+    box-shadow: 0.05em 0.1em 0.9em hsl(var(--accent) / 0.3),
+    0 0 0 -0.1em hsl(var(--bg)), 0 0 0 -0.2em hsl(var(--accent));
+    transition: box-shadow var(--_tspeed_fast) var(--_ttype_squish),
+    background-color var(--_tspeed_fast) var(--_ttype_squish);
   }
 
   .btn :where(svg, img, span) {
