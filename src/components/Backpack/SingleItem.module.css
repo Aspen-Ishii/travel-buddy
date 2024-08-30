@@ -35,7 +35,8 @@
       0 0 .5em hsl(var(--accent) / .1),
       0 0 0 0.05em hsl(var(--accent) / .5),
       0 0 0 -0.2em hsl(var(--accent));
-    transition: box-shadow var(--_tspeed_fast) ease-in-out,
+    transition: 
+      box-shadow var(--_tspeed_fast) ease-in-out,
       background-color 80ms ease-in-out;
   }
   
@@ -56,9 +57,9 @@
     width: 1em;
     height: 1em;
     display: grid;
-    place-items: center;
+    align-self: center;
     top: 50%;
-    color: hsl(var(--muted));
+    color: red; /*hsl(var(--muted)); */
     border-radius: var(--_radius);
     transform: translate3d(calc(-100% - var(--taskgroup-gap)), -50%, 0);
     transition: background-color 80ms ease-in-out;
@@ -67,6 +68,7 @@
   .checkmark svg {
     width: .75em;
     height: .75em;
+
   }
   
   .checkbox:checked {
@@ -75,4 +77,8 @@
   
   .checkbox:checked+label {
     text-decoration: line-through;
+  }
+
+  .delete {
+    --accent: var(--accent1);
   }

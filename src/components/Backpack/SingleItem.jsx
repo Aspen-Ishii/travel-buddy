@@ -3,7 +3,9 @@ import { useState } from 'react';
 import styles from './SingleItem.module.css';
 
 // library imports
-import { CheckIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { PencilSquareIcon } from '@heroicons/react/24/solid';
+//import { TrashIcon } from '@heroicons/react/24/outline'; /*broken error: TrashIcon already being imported */
 
 
 const SingleItem = ({item}) => {
@@ -28,6 +30,20 @@ const SingleItem = ({item}) => {
                 <CheckIcon strokeWidth={2} width={24} height={24} />
             </p>
             </label>
+        </div>
+        <div className={styles["item-group"]}>
+            <button className='btn' aria-label={`Update ${item.name} Item`}
+            //onClick
+            >
+                <PencilSquareIcon width={24} height={24} />
+            </button>
+            <button
+            className={`btn ${styles.delete}`}
+            aria-label={`Delete ${item.name} Item`}
+            // onClick={}
+            >
+                <TrashIcon width={24} height={24} />
+            </button>
         </div>
     </li>
   )
