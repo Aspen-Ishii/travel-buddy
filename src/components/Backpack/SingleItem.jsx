@@ -8,7 +8,7 @@ import { PencilSquareIcon } from '@heroicons/react/24/solid';
 //import { TrashIcon } from '@heroicons/react/24/outline'; /*broken error: TrashIcon already being imported */
 
 
-const SingleItem = ({item, deleteItem, toggleItem}) => {
+const SingleItem = ({item, deleteItem, toggleItem, enterEditMode }) => {
     const [isChecked, setIsChecked] = useState(item.checked)
     
     
@@ -35,7 +35,7 @@ const SingleItem = ({item, deleteItem, toggleItem}) => {
         </div>
         <div className={styles["item-group"]}>
             <button className='btn' aria-label={`Update ${item.name} Item`}
-            //onClick
+            onClick={() => enterEditMode(item)}
             >
                 <PencilSquareIcon width={24} height={24} />
             </button>
