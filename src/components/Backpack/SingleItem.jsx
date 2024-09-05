@@ -8,11 +8,13 @@ import { PencilSquareIcon } from '@heroicons/react/24/solid';
 //import { TrashIcon } from '@heroicons/react/24/outline'; /*broken error: TrashIcon already being imported */
 
 
-const SingleItem = ({item, deleteItem}) => {
+const SingleItem = ({item, deleteItem, toggleItem}) => {
     const [isChecked, setIsChecked] = useState(item.checked)
+    
     
     const handleCheckboxChange = (e) => {
         setIsChecked(!isChecked); {/* toggle off and on */}
+        toggleItem(item.id);
     }
 
     return (

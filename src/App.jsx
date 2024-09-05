@@ -16,6 +16,14 @@ function App() {
   const deleteItem = (id) => {
     setItems(prevState => prevState.filter(t => t.id !== id));
   }
+  
+  const toggleItem = (id) => {
+    setItems(prevState => prevState.map (t => (
+      t.id == id ? { ...t, checked: !t.checked } //set it opposite to current checked status
+      : t //else return item
+    
+    ))) 
+  }
 
   return (
     <div className='container'>
@@ -27,6 +35,7 @@ function App() {
         <ItemList 
           items={items}
           deleteItem={deleteItem}
+          toggleItem={toggleItem}
         />
       )}
       
