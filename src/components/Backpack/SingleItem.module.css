@@ -82,3 +82,10 @@
   .delete {
     --accent: var(--accent1);
   }
+
+  .error {
+    color: hsl(var(--accent1));
+    font-size: var(--_size);
+    text-align: center;
+  }
+  

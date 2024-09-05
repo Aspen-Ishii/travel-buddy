@@ -8,7 +8,7 @@ import { PencilSquareIcon } from '@heroicons/react/24/solid';
 //import { TrashIcon } from '@heroicons/react/24/outline'; /*broken error: TrashIcon already being imported */
 
 
-const SingleItem = ({item}) => {
+const SingleItem = ({item, deleteItem}) => {
     const [isChecked, setIsChecked] = useState(item.checked)
     
     const handleCheckboxChange = (e) => {
@@ -40,7 +40,7 @@ const SingleItem = ({item}) => {
             <button
             className={`btn ${styles.delete}`}
             aria-label={`Delete ${item.name} Item`}
-            // onClick={}
+            onClick={() => deleteItem(item.id)}
             >
                 <TrashIcon width={24} height={24} />
             </button>

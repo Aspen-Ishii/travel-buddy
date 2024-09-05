@@ -13,13 +13,24 @@ function App() {
     setItems(prevState => [... prevState, item])
   }
 
+  const deleteItem = (id) => {
+    setItems(prevState => prevState.filter(t => t.id !== id));
+  }
+
   return (
     <div className='container'>
       <header>
         <h1>Travel Buddy</h1>
       </header>
       <Backpack addItem={addItem}/>
-      {items && <ItemList items={items}/>}
+      {items && (
+        <ItemList 
+          items={items}
+          deleteItem={deleteItem}
+        />
+      )}
+      
+      
       <Footer />
     </div>
   )
