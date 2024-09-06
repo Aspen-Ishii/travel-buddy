@@ -8,7 +8,7 @@ import { PlusIcon } from '@heroicons/react/24/solid';
 const Backpack = ({addItem}) => {
   const [item, setItem] = useState("");
 
-  const handelFormSubmit = (e) => {
+  const handleFormSubmit = (e) => {
       e.preventDefault();
       addItem({
         name: item,
@@ -20,7 +20,7 @@ const Backpack = ({addItem}) => {
   }
 
   return (
-    <form className={styles.list} onSubmit={handelFormSubmit}>
+    <form className={styles.list} onSubmit={handleFormSubmit}>
         <div className={styles.wrapper}> 
            <input type='text'  id='item' className={styles.input} 
            value={item}
