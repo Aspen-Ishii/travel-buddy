@@ -34,7 +34,12 @@ function App() {
       t.id == item.id ? { ...t, name: item.name } 
       : t 
     ))) 
-    // TODO: close the edit mode
+    closeEditMode();
+  }
+
+  const closeEditMode = () => {
+    setIsEditing(false);
+    //TODO: previous state focus
   }
 
   const enterEditMode = (item) => {

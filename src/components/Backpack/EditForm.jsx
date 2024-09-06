@@ -10,7 +10,7 @@ const EditForm = ({ editedItem, updateItem }) => {
 
   const handleFormSubmit = (e) => {
       e.preventDefault();
-      // updateItem()
+      updateItem({... editedItem, name:updatedItemName})
       }; 
 
 return (
